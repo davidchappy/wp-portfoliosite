@@ -1,0 +1,529 @@
+/*
+Theme Name: David Chapman Portfolio Theme
+Author: David Chapman
+Author URI: http://dachapman.com/
+Description: A simple theme intended to run my portfolio website.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, light, flexbox, blue, one-column, two-columns, left-sidebar, fluid-layout, responsive-layout, featured-images, gallery
+ 
+This the first WordPress theme I have created, so feel free to make me aware of any bugs or shortcomings. 
+*/
+
+/* ---------- Colors ----------- */
+
+/*
+blue-gray: #324654
+green-blue: #B1C9BD
+light brown: #AD8344
+medium brown: #A0793F
+offwhite: #E5E5E5
+
+*/
+
+
+/* ---------- Global Styles ----------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	max-width: 100%;
+	overflow:hidden;
+	overflow-y: auto;
+}
+
+body {
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-size: 16px;
+	color: #324654;
+	background: #fff;
+	position: relative;
+	transition: 1s opacity ease-out;
+	opacity: 1;
+	overflow-y: scroll; /* to help with scrolling on iOS */
+ 	-webkit-overflow-scrolling: touch;
+	/*padding-top: 95px; // activate if navigation is added*/
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+a {
+	text-decoration: none;
+	color: #A0793F;
+}
+
+a:hover {
+	color: #AD8344;
+}
+
+.btn {
+	margin: 0 auto;
+	font-size: 1rem;
+	height: 2.5rem;
+	min-width: 12rem;
+	line-height: 2.5rem;
+	background: #A0793F;
+	border-radius: 5px;
+	color: #fff;
+	padding: 0 1rem;
+	display:inline-block;
+	transition: .4s;
+}
+
+.btn:hover {
+	background: #AD8344;
+	color: #fff;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+h1 {
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: #324654;
+}
+
+h2 {
+	margin-bottom: .8em;
+}
+
+h3 { 
+	margin: 1rem auto .5rem;
+}
+
+hr {
+	background: #324654;
+	
+}
+
+.secondary-text {
+	color: #788880;
+	font-weight: 400;
+}
+
+.clearfix::after {
+	content:'';
+	display: table;
+	clear: both;
+}
+
+/* ---------- Layout ----------- */
+
+.main-header, 
+.main-nav,
+.banner,
+.tags,
+.work,
+.work-item,
+.main-footer,
+.footer-icons {
+	display: flex;
+}
+
+.content { 
+	width: 90%;
+	max-width: 1195px;
+	margin: 0 auto;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+.about, .work, .contact {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	margin-bottom: -48px; /* Allow for sticky footer */
+}
+
+.wrapper::after {
+	content: "";
+	display:block;
+	height: 48px;
+}
+
+/* ---------- Header ----------- */
+
+.main-header {
+	background: #fff;
+	padding: .7em;
+	/*opacity:.8; // activate if navigation is added */
+}
+
+.brand-container {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap:nowrap;
+}
+
+.brand-container svg {
+	width: 60px;
+	height: 60px;
+	margin-right: 1rem;
+}
+
+.site-title {
+	line-height:1.2;
+}
+
+.site-title span {
+	display:block;
+}
+
+
+/* ---------- Navigation ----------- // activate if navigation is added */
+
+/*
+.main-header {
+	position: fixed; 
+	top: 0;
+	z-index: 2;
+	box-shadow: 0 1px 4px rgba(0,0,0,.4);
+	width: 100%;
+}
+
+.main-nav {
+	align-items: center;
+	justify-content: space-around;
+}
+
+.nav-item{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.nav-item a {
+	display: block;
+	padding: .2em .5em;
+	text-transform: uppercase;
+	font-size: .7em;
+	border: 1px solid #324654;
+}
+
+.nav-item a:hover {
+	background: #788880;
+	color: #fff;
+	border: 1px solid #788880;
+}
+*/
+
+
+/* ---------- Banner ----------- */
+
+.banner {
+	flex-direction: column;
+	align-items: center;
+	background: #B1C9BD;
+	padding: 2rem 3rem;
+}
+
+.headshot {
+	border-radius: 50%;
+	border: 2px solid #23313A;
+	width: 200px;
+	transition: 1s opacity ease-out;
+	transition-delay: .3s;
+	opacity: 0;
+	display: block;
+}
+
+.tagline {
+	margin: 1.5em auto;
+	text-transform: lowercase;
+}
+
+.tags { 
+	flex-wrap:wrap;
+	justify-content: center;
+	flex-grow: 1;
+	max-width: 315px;
+}
+
+.tag {
+	margin: 0 .5rem 1rem;
+	background: #324654;
+	color: #E5E5E5;
+	border-radius: 5px;
+	padding: .3rem .5rem;
+	font-size: .8em;
+	letter-spacing:1px;
+}
+
+/* ---------- About ----------- */
+
+.about {
+	padding: 2.5rem 0;
+}
+
+/* ---------- Work ----------- */
+
+.work {
+	flex-direction: column;
+	align-items: center;
+}
+
+.work h2 {
+	margin-bottom: 1rem;
+}
+
+.work-item {
+	position: relative;
+	line-height: 0;
+	width: 300px;
+	margin-bottom: 2rem; 
+	overflow: hidden;
+}
+/*
+.work-item a {
+	height: 100%;
+}*/
+
+.work-item:hover figcaption {
+	transform: translateY(-80%);
+}
+
+.work-item p {
+	font-size: .8em;
+}
+
+.work-thumbnail {
+	border: 2px solid #E3CBAC;
+	max-width: 100%;
+}
+
+figcaption {
+	background: rgba(50,70,84,.9);
+	color: #E5E5E5;
+	position: absolute;
+	bottom:-80%;
+	line-height: 1.5;
+	display: block;
+	height: 100%;
+	padding: 1em;
+	-webkit-transition: .2s height;
+	transition: .2s;
+}
+
+figcaption h4 {
+	font-size: 1.1em;
+	margin-bottom: .5em;
+	text-align: center;
+	color: #B1C9BD;
+}
+
+figcaption p {
+	font-size: .9em;
+	text-align: left;
+	line-height: 1.2;
+}
+
+.click-to-view {
+	font-size: 1rem;
+	font-weight: normal;
+	text-align: center;
+	color: #E5E5E5;
+}
+
+/* ---------- Contact ----------- */
+
+.contact {
+	padding-top: 0;
+	margin-bottom: 2rem;
+}
+
+/* ---------- Footer ----------- */
+
+.main-footer,
+.footer-icons {
+	flex-direction: row;
+	align-items: center;
+}
+
+.my-blog {
+	align-self: center;
+}
+
+.main-footer {
+	justify-content: space-between;
+	background: #324654;
+	width: 100%;
+	height: 48px;
+	padding: 0 1rem;
+}
+
+.main-footer a {
+	z-index: 10;
+}
+
+.copyright,
+.footer-icons {
+	width: 70px;
+}
+
+.copyright {
+	color: #fff;
+	margin: 0;
+	font-size: .7em;
+}
+
+.footer-icons {
+	height: 100%;
+	justify-content: flex-end;
+}
+
+.footer-icons a {
+	height: 30px;
+	width: 30px;
+	background-size: cover;
+}
+
+.footer-icons a:not(:first-of-type) {
+	margin-left: .5rem;
+}
+
+.github {
+	background: url("img/GitHub-Mark.png") no-repeat;
+}
+
+.linkedin {
+	background: url("img/linkedin.png") no-repeat;
+}
+
+.my-blog {
+	color: #B1C9BD;
+	font-size: .8em;
+}
+
+/* ---------- Media Queries ----------- */
+
+@media all and (min-width: 544px) {
+	
+	.nav-item {
+		font-size: 1.2em;
+		line-height: 1.2;
+	}
+	
+	.row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.work-item {
+		margin: 0 1em 3em;
+		display: inline-block;
+	}
+
+}
+
+@media all and (min-width: 720px) {
+
+	.site-title span {
+		display:inline;
+	}
+	.site-title span::before {
+		content: ' | ';
+		display: inline;
+		color: #324654; 
+	}
+
+	.row {
+		justify-content: center;
+	}
+
+	.work-item {
+		margin: 0 1em 3em;
+		display: inline-block;
+		width: 350px;
+	}
+
+	.copyright,
+	.footer-icons {
+		width: 200px;
+	}
+
+	.copyright,
+	.my-blog {
+		font-size: .9em;
+	}
+
+	.my-blog::before {
+		content: 'Visit ';
+		display: inline;
+	}
+
+}
+
+@media all and (min-width: 893px) {
+
+	.nav-item{
+		font-size: 1.2em;
+		line-height: 1.2;
+	}
+
+	.row {
+		max-width: 2000px;
+		justify-content: center;
+	}
+
+	.work-item {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.work-item p {
+		font-size: 1em;
+	}
+	
+	.about {
+		margin: 0 auto;
+		max-width: 780px;
+	}
+
+	.copyright,
+	.my-blog {
+		font-size: 1em;
+	}
+
+	.footer-icons a {
+		height: 40px;
+		width: 40px;
+	}
+
+}
+
+/** {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
