@@ -407,6 +407,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 1481,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "page-home.php",
+			"settings":
+			{
+				"buffer_size": 678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content-portfolio.php",
+			"settings":
+			{
+				"buffer_size": 816,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -500,6 +524,13 @@
 	},
 	"file_history":
 	[
+		"/www/sites/wp-portfoliosite/wwwroot/wp-content/themes/dac-portfolio/style.css",
+		"/www/sites/wp-portfoliosite/wwwroot/wp-content/themes/dac-portfolio/js/scripts.js",
+		"/www/sites/wp-portfoliosite/wwwroot/wp-content/themes/dac-portfolio/header.php",
+		"/www/sites/wp-portfoliosite/wwwroot/.gitignore",
+		"/www/sites/wp-portfoliosite/wwwroot/wp-content/themes/dac-portfolio/content-banner.php",
+		"/www/sites/wp-portfoliosite/wwwroot/wp-content/themes/dac-portfolio/content-portfolio.php",
+		"/www/sites/wp-portfoliosite/wwwroot/wp-content/themes/dac-portfolio/footer.php",
 		"/www/sites/portfoliosite/wwwroot/css/flex.css",
 		"/www/sites/wp-treehouse/wwwroot/wp-content/themes/treehouse-portfolio/page-sidebar-left.php",
 		"/www/sites/wp-treehouse/wwwroot/wp-content/themes/treehouse-portfolio/single.php",
@@ -620,14 +651,7 @@
 		"/Users/davidchappy/Sites/explore_california/.git/COMMIT_EDITMSG",
 		"/Users/davidchappy/Sites/explore_california/commit 9e0dd5cdb6ed92e7e75437deac307b8f8f6a6150",
 		"/Users/davidchappy/Sites/explore_california/tempfile2.txt",
-		"/Users/davidchappy/Sites/explore_california/assets/pdfs/.gitkeep",
-		"/Users/davidchappy/Sites/explore_california/.gitignore",
-		"/Users/davidchappy/.gitconfig",
-		"/Users/davidchappy/Users/davidchppy/.gitconfig",
-		"/Users/davidchappy/.gitignore_global",
-		"/Users/davidchappy/Sites/explore_california/.git/config",
-		"/Users/davidchappy/Desktop/junk1",
-		"/Users/davidchappy/Desktop/junk2"
+		"/Users/davidchappy/Sites/explore_california/assets/pdfs/.gitkeep"
 	],
 	"find":
 	{
@@ -635,9 +659,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
+			"<open files>",
 			"/www/sites/uptownbrass/wwwroot/wordpress/wp-content/themes/blank_theme",
 			"",
 			"/Users/davidchappy/Sites/explore_california"
@@ -648,6 +673,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".work-item",
+			".main-footer",
+			"wpt_",
 			"fixed",
 			"z-index",
 			".main-footer",
@@ -718,6 +746,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"wpp_",
 			"X",
 			"y",
 			".photo-overlay {\n  transform: translateY(-100%);\n}\n\n.photo:hover .photo-overlay {\n  transform: translateY(0);\n}\n\n.photo:hover img {\n  transform: translateY(100%);\n}",
@@ -741,8 +770,95 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 1481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1412,
+								1412
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Kuroir Theme.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "page-home.php",
+					"settings":
+					{
+						"buffer_size": 678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								378,
+								378
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Kuroir Theme.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "content-portfolio.php",
+					"settings":
+					{
+						"buffer_size": 816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								816,
+								816
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Kuroir Theme.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -17,7 +17,7 @@
           <h4><?php the_field('dac_portfolio_title'); ?></h4>
           <p class="work-item-intro"><?php the_field('dac_portfolio_excerpt'); ?></p>
           <p><?php the_field('dac_portfolio_description'); ?></p>
-          <a href="#" class="btn click-to-view">View This Project</a>
+          <a href="<?php the_field('dac_portfolio_link'); ?>" class="btn click-to-view">View This Project</a>
         </figcaption>
   </figure>
 
