@@ -280,7 +280,10 @@ hr {
 /* ---------- About ----------- */
 
 .about {
-	padding: 2.5rem 0;
+	padding: 3rem 0;
+}
+.about p {
+	line-height: 1.5;
 }
 
 /* ---------- Work ----------- */
