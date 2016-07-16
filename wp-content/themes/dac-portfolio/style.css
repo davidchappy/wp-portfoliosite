@@ -1,4 +1,4 @@
-/*
+
 Theme Name: David Chapman Portfolio Theme
 Author: David Chapman
 Author URI: http://dachapman.com/
@@ -306,6 +306,11 @@ hr {
 	overflow: hidden;
 }
 
+.work-item:focus figcaption,
+.work-item:active figcaption {
+	transform: translateY(-80%);
+}
+
 .work-item:hover figcaption {
 	transform: translateY(-80%);
 }
@@ -523,8 +528,9 @@ figcaption p {
 
 }
 
-/** {
+/* Use this to quickly view the structure of the site */
+/** { 
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-}*/
+}
