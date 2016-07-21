@@ -116,6 +116,14 @@ hr {
 	
 }
 
+button {
+	border: none;
+	background: none;
+	color: #324654;
+	outline: none;
+	cursor: pointer;
+}
+
 .secondary-text {
 	color: #788880;
 	font-weight: 400;
@@ -165,6 +173,14 @@ hr {
 	content: "";
 	display:block;
 	height: 48px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
 }
 
 /* ---------- Header ----------- */
@@ -299,6 +315,7 @@ hr {
 
 .work-item {
 	position: relative;
+	display: inline-block;
 	line-height: 0;
 	width: 300px;
 	height: 430px;
@@ -350,6 +367,19 @@ figcaption p {
 	font-weight: normal;
 	text-align: center;
 	color: #E5E5E5;
+}
+
+.hide-caption {
+	position: absolute;
+	bottom: 1em;
+	left: 150px;
+	margin-left: -50px;
+	width: 100px;
+	color: #E5E5E5;
+	text-align: center;
+	font-size: .8em;
+	display: block;
+	text-transform: uppercase;
 }
 
 /* ---------- Contact ----------- */
@@ -430,18 +460,9 @@ figcaption p {
 		font-size: 1.2em;
 		line-height: 1.2;
 	}
-	
-	.row {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		align-items: center;
-	}
 
 	.work-item {
 		margin: 0 1em 3em;
-		display: inline-block;
 	}
 
 }

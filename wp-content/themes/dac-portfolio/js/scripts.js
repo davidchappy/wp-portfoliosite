@@ -5,4 +5,9 @@ jQuery(document).ready(function($) {
 	$(document).ready(function() {
 		$('.headshot').css('opacity', '1');
 	});
+
+	$('.hide-caption').click(function(event) {
+		$(this).parent().css('transform', 'translateY(0)');
+	});
+
 });
