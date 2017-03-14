@@ -71,13 +71,13 @@ class Ai1wm_Import_Database {
 			// Get blogs dir Upload Path
 			if ( ! in_array( sprintf( "'%s'", trim( ai1wm_blogsdir_path( $blog->Old->Id ), '/' ) ), $old_values ) ) {
 				$old_values[] = sprintf( "'%s'", trim( ai1wm_blogsdir_path( $blog->Old->Id ), '/' ) );
-				$new_values[] = sprintf( "'%s'", get_blog_option( $blog->New->Id, 'upload_path' ) );
+				$new_values[] = sprintf( "'%s'", get_option( 'upload_path' ) );
 			}
 
 			// Get sites Upload Path
 			if ( ! in_array( sprintf( "'%s'", trim( ai1wm_uploads_path( $blog->Old->Id ), '/' ) ), $old_values ) ) {
 				$old_values[] = sprintf( "'%s'", trim( ai1wm_uploads_path( $blog->Old->Id ), '/' ) );
-				$new_values[] = sprintf( "'%s'", get_blog_option( $blog->New->Id, 'upload_path' ) );
+				$new_values[] = sprintf( "'%s'", get_option( 'upload_path' ) );
 			}
 
 			// Handle old and new sites dir style
